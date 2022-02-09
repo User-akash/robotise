@@ -40,15 +40,15 @@ function takeSnap(x, y)
     });
 }
 
-// async function startpage(){
-//     for(let y = 0; y < screenSize.height-impSize.y; y+= impSize.y)
-//         for (let x = 0; x < screenSize.width-impSize.x; x+=impSize.x) {
-//             await takeSnap(x, y);
-//         }
-// }
+async function startpage(){
+    for(let y = 0; y < screenSize.height-impSize.y; y+= impSize.y)
+        for (let x = 0; x < screenSize.width-impSize.x; x+=impSize.x) {
+            await takeSnap(x, y);
+        }
+}
 
-// startpage()
-// .catch(err=>console.log(errr))
+startpage()
+.catch(err=>console.log(errr))
 
 // const { rejects } = require("assert");
 // let gest = child_process.spawn('ffmpeg', ['-video_size', '100x100', '-f', 'x11grab', '-i', `${process.env.DISPLAY}+${100},${100}`,'-vframes','1', '-f', 'mjpeg', '-']);
